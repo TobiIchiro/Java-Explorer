@@ -16,9 +16,11 @@ public class ShopApp {
     public static void main(String[] args) {
         // TODO code application logic here
         double tax = 0.2; //Tax 20%
-        double total;
+        double total = 0;
         int measurement = 3;
+        
         System.out.println("Welcome to Duke Choice Shop!");
+        
         Customer c1 = new Customer();
         c1.name = "Pinky";
         c1.size = "S";
@@ -38,18 +40,32 @@ public class ShopApp {
         }
                 
         System.out.println("Customer: "+c1.name);
+        
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
+        Clothing[] items = {item1,item2};
+        
         item1.description = "Blue Jacket";
         item1.price = 20.9;
         item1.size = "M";
         item2.description = "Orange T-Shirt";
         item2.price = 10.5;
         item2.size = "S";
-        System.out.println(item1.description + "," +item1.price+","+item1.size);
-        System.out.println(item2.description + "," +item2.price+","+item2.size);
-        total = (2*item2.price + item1.price)*(1+tax);
+        
+        //System.out.println(item1.description + "," +item1.price+","+item1.size);
+        //System.out.println(item2.description + "," +item2.price+","+item2.size);
+        for(Clothing item : items)
+        {
+            System.out.println(item.description + "," +item.price+","+item.size);
+        }
+        for(Clothing item : items)
+        {
+            total += item.price * (1 + tax);
+        }
+        //total = (2*item2.price + item1.price)*(1+tax);
         System.out.println("Total: " + total);
+        
+        
         
         
         
