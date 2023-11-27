@@ -28,4 +28,20 @@ public class Customer {
         this.size = size;
     }
     
+    public void setSize(int measurement) {
+        switch(measurement){
+            case 1,2,3:
+                setSize("S");
+                break;
+            case 4,5,6:
+                setSize("M");
+                break;
+            case 7,8,9:
+                setSize("L");
+                break;
+            default:
+                setSize("XL");
+                break;
+        }
+    }
 }

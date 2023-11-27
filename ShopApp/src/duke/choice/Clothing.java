@@ -28,8 +28,9 @@ public class Clothing {
     }
 
     public void setPrice(double price) {
-        if(price <= MIN_PRICE) this.price = MIN_PRICE;
-        else this.price = price;
+        /*if(price <= MIN_PRICE) this.price = MIN_PRICE;
+        else this.price = price;*/
+        this.price = (price > MIN_PRICE) ? price : MIN_PRICE;
     }
 
     public String getSize() {

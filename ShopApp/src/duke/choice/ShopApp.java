@@ -24,20 +24,7 @@ public class ShopApp {
         Customer c1 = new Customer();
         c1.setName("Pinky");
         c1.setSize("S");
-        switch(measurement){
-            case 1,2,3:
-                c1.setSize("S");
-                break;
-            case 4,5,6:
-                c1.setSize("M");
-                break;
-            case 7,8,9:
-                c1.setSize("L");
-                break;
-            default:
-                c1.setSize("X");
-                break;
-        }
+        c1.setSize(6);
                 
         System.out.println("Customer: "+c1.getName());
         
