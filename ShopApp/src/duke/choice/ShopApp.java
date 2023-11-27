@@ -47,27 +47,17 @@ public class ShopApp {
         items[3].setDescription("Blue T-Shirt");
         items[3].setPrice(10.5);
         items[3].setSize("S");
-        
+        c1.addItems(items);
         //System.out.println(item1.description + "," +item1.price+","+item1.size);
         //System.out.println(item2.description + "," +item2.price+","+item2.size);
-        for(Clothing item : items)
+        for(Clothing item : c1.getItems())
         {
-            if(item.getSize().equals(c1.getSize())) 
-            {
-                System.out.println(item.getDescription() + "," +item.getPrice()+","+item.getSize());
-                total += item.getPrice();
-            }
-            if(total > 15)break;
+            System.out.println(item.getDescription() + "," +item.getPrice()+","+item.getSize());
         }
+        total = c1.getTotalClothingCost();
         //total = (2*item2.price + item1.price)*(1+tax);
         System.out.println("Total: " + total);
-        
-        
-        
-        
-        
-        
-        
+
     }
     
 }
