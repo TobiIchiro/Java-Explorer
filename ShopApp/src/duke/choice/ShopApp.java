@@ -15,13 +15,15 @@ public class ShopApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        double tax = 0.2; //Tax 20%
-        double total = 0;
+        // double tax = 0.2; //Tax 20%
+        double total;
         
         System.out.println("Welcome to Duke Choice Shop!");
         
         Customer c1 = new Customer("Pinky",3);              
         System.out.println("Customer: "+c1.getName());
+        
+        System.out.println(Clothing.MIN_PRICE);
         
         Clothing item1 = new Clothing("Blue Jacket",9,"M");
         Clothing item2 = new Clothing("Orange T-Shirt",9,"S");
