@@ -55,7 +55,24 @@ public class ShopApp {
         total = c1.getTotalClothingCost();
         //total = (2*item2.price + item1.price)*(1+tax);
         System.out.println("Total: " + total);
-
+        
+        double average = 0;
+        int count = 0;
+        for(Clothing item : c1.getItems())
+        {
+            if(item.getSize().equals("L"))
+            {
+                count++;
+                average += item.getPrice();
+            }
+        }
+        try{
+            average = average / count;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Dividing by 0");
+        }
+        System.out.println("Average: " + average);
     }
     
 }
