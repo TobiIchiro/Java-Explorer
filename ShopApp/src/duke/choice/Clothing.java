@@ -15,6 +15,14 @@ public class Clothing {
     private final double MIN_PRICE = 10;
     private final double TAX = 0.2;
 
+    public Clothing(String description, double price, String size) {
+        this.description = description;
+        this.price = price;
+        this.size = size;
+    }
+
+    
+    
     public String getDescription() {
         return description;
     }
