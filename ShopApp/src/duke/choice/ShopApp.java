@@ -50,7 +50,7 @@ public class ShopApp {
         //System.out.println(item2.description + "," +item2.price+","+item2.size);
         for(Clothing item : c1.getItems())
         {
-            System.out.println(item.getDescription() + "," +item.getPrice()+","+item.getSize());
+            System.out.println(item);
         }
         total = c1.getTotalClothingCost();
         //total = (2*item2.price + item1.price)*(1+tax);

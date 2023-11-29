@@ -20,8 +20,11 @@ public class Clothing {
         this.price = price;
         this.size = size;
     }
-
-    
+    @Override
+    public String toString()
+    {
+        return description + "," + price + "," + size;
+    }
     
     public String getDescription() {
         return description;
