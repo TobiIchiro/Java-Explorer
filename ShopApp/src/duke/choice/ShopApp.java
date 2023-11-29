@@ -4,6 +4,8 @@
  */
 package duke.choice;
 
+import java.util.Arrays;
+
 /**
  *
  * @author israe
@@ -72,7 +74,13 @@ public class ShopApp {
         catch(ArithmeticException e){
             System.out.println("Dividing by 0");
         }
+        
         System.out.println("Average: " + average);
+        Arrays.sort(c1.getItems());
+        for(Clothing item : c1.getItems())
+        {
+            System.out.println(item);
+        }
     }
     
 }
